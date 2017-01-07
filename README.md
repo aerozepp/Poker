@@ -1,2 +1,2 @@
 # Poker
-Poker for dos console
+Poker for dos console made in C.
