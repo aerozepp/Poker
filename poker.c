@@ -73,8 +73,10 @@ int main(void) {
 		RankVisulaization(&comHandOrder);
 		WhoWins(&plrHandOrder, &comHandOrder, plrHand, comHand, &plrCash,
 				&plrBet);
-	printf("Game Over\n");
 	}
+	
+	printf("Game Over\n");
+	
 	return 0;
 }
 
