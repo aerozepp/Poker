@@ -53,7 +53,7 @@ int main(void) {
 	while (plrCash > 0) { //when money comes behind 0, game over
 		plrBet = 0; //initiate the variable as 0 on each round
 		CardDeck(deck); // build card deck (52 cards)
-		ShuffleDeck(deck); // 52Àå Ä«µå ¼¯±â
+		ShuffleDeck(deck); // 52ì¥ ì¹´ë“œ ì„ê¸°
 		CardDispenser(deck, plrHand, comHand); //dealing cards
 		Cash(&plrCash);
 		CardVisualization(plrHand);
@@ -74,13 +74,14 @@ int main(void) {
 		WhoWins(&plrHandOrder, &comHandOrder, plrHand, comHand, &plrCash,
 				&plrBet);
 	printf("Game Over\n");
+	}
 	return 0;
 }
 
 void GameTitle(void) {
 
 	printf("World Poker Championship 2016\n");
-	printf("ÄŞÇ»Å¸¶û ´ÙÀÌ´ÙÀÌ\n");
+	printf("ì½¤í“¨íƒ€ë‘ ë‹¤ì´ë‹¤ì´\n");
 	printf("=============================\n\n");
 }
 void CardDeck(Card* deck) {
@@ -132,48 +133,48 @@ void CardVisualization(Card* hand) {
 
 		if (hand[i].shape == SPADE) {
 			if (hand[i].number == 1)
-				printf("A¢¼ ");
+				printf("Aâ™  ");
 			else if (hand[i].number >= 2 && hand[i].number <= 10)
-				printf("%d¢¼ ", hand[i].number);
+				printf("%dâ™  ", hand[i].number);
 			else if (hand[i].number == 11)
-				printf("J¢¼ ");
+				printf("Jâ™  ");
 			else if (hand[i].number == 12)
-				printf("Q¢¼ ");
+				printf("Qâ™  ");
 			else
-				printf("K¢¼ ");
+				printf("Kâ™  ");
 		} else if (hand[i].shape == HEART) {
 			if (hand[i].number == 1)
-				printf("A¢¾ ");
+				printf("Aâ™¥ ");
 			else if (hand[i].number >= 2 && hand[i].number <= 10)
-				printf("%d¢¾ ", hand[i].number);
+				printf("%dâ™¥ ", hand[i].number);
 			else if (hand[i].number == 11)
-				printf("J¢¾ ");
+				printf("Jâ™¥ ");
 			else if (hand[i].number == 12)
-				printf("Q¢¾ ");
+				printf("Qâ™¥ ");
 			else
-				printf("K¢¾ ");
+				printf("Kâ™¥ ");
 		} else if (hand[i].shape == DIAMOND) {
 			if (hand[i].number == 1)
-				printf("A¡ã ");
+				printf("Aâ–² ");
 			else if (hand[i].number >= 2 && hand[i].number <= 10)
-				printf("%d¡ã ", hand[i].number);
+				printf("%dâ–² ", hand[i].number);
 			else if (hand[i].number == 11)
-				printf("J¡ã ");
+				printf("Jâ–² ");
 			else if (hand[i].number == 12)
-				printf("Q¡ã ");
+				printf("Qâ–² ");
 			else
-				printf("K¡ã ");
+				printf("Kâ–² ");
 		} else {
 			if (hand[i].number == 1)
-				printf("A¢À ");
+				printf("Aâ™£ ");
 			else if (hand[i].number >= 2 && hand[i].number <= 10)
-				printf("%d¢À ", hand[i].number);
+				printf("%dâ™£ ", hand[i].number);
 			else if (hand[i].number == 11)
-				printf("J¢À ");
+				printf("Jâ™£ ");
 			else if (hand[i].number == 12)
-				printf("Q¢À ");
+				printf("Qâ™£ ");
 			else
-				printf("K¢À ");
+				printf("Kâ™£ ");
 		}
 	}
 	printf("\n\n");
